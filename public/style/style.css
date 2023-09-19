@@ -1,0 +1,332 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+body{
+  margin: 0;
+  
+}
+#first-component{
+    background-color: #ADC4CE;
+    color: rgb(7, 8, 8);
+    font-family: 'Rozha One', serif;
+}
+#nab-bar{
+    display: flex;
+    height: 67px;
+    padding: 35px 60px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+    color: rgb(16, 16, 16);
+    z-index: 2;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #ADC4CE;
+    
+    
+}
+.my-name{
+  font-family: 'Parisienne', cursive;
+  width: max-content;
+}
+#nab-bar .right-link ul{
+    display: flex;
+    justify-content: space-around;
+    font-size: 21px;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    
+}
+#nab-bar .right-link ul a {
+    text-decoration: none;
+    margin-left: 25px;
+    color: rgb(23, 23, 23);
+    position: relative; /* Add this line for positioning the pseudo-element */
+}
+#nab-bar .right-link ul a:hover{
+    color: #016A70;
+}
+#nab-bar .right-link ul a::before { /* Create a pseudo-element for the underline */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    height: 2.3px; /* Set the initial height of the underline */
+    background-color: #016A70;
+    color: black;
+    
+    transition: width  0.35s ease-in-out; /* Add a transition for width (or use another property) */
+   /* Place the pseudo-element below the text */
+}
+
+#nab-bar .right-link ul a:hover::before { /* Modify the pseudo-element on hover */
+    width: 100%; /* Increase the width to create the underline effect */
+    color: #016A70;
+}
+ 
+/*home box*/
+.home-box{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    align-items: center;
+}
+
+.left-container{
+    margin-top: 10px;
+    margin-left: 90px;
+    font-size: 30px;
+
+}
+.left-container a{
+    text-decoration: none;
+    margin: 5px;
+    
+}
+
+
+#icon-mom .contact-icon svg:hover,#icon-mom .contact-icon:hover{
+  transform: translateY(-15px);
+  
+}
+.left-container .name{
+    font-size: 55px;
+}
+.image-container {
+    width: 45%; /* Set the width of the container */
+    height: 450px; /* Set the height of the container */
+     
+  }
+  
+  .image-container img {
+    width: 60%; /* Ensure the image doesn't exceed the container width */
+    height: 80%; /* Ensure the image doesn't exceed the container height */
+     /* Center the image vertically within the container */
+    border-radius: 50%;
+    outline: #016A70 groove 5.5px;
+    transition: width height 0.3s linear;
+  }
+  .image-container img:hover{
+    width: 77%;
+    height: 90%;
+    box-shadow: -5px 5px 40px 4px #a2d6cb;
+  }
+
+  #about-skills{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px 10px;
+    
+   background-color: #709eb6;
+   height: min-content;
+  }
+  .both-end{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
+  }
+  .both-end>#skill-title{
+      align-self: flex-end;
+      margin-bottom: 50px;
+      margin-top: 60px;
+      font-size: 25px;
+      font-family: 'Chivo', sans-serif;
+  }
+  .both-end>p{
+    font-family: 'Parisienne', cursive;
+    margin-top: 45px;
+  }
+  #front-end{
+    display: grid;
+    grid-template-columns:repeat(3,120px);
+    margin: 10px;
+    grid-template-rows: repeat(2,100px);
+    gap: 20px;
+  }
+  #front-end div,#back-end div{
+    border: #709eb6 1px solid;
+    text-align: center;
+    padding-top: 10px;
+    background-color: #193858;
+    border-radius: 10px;
+    color: rgb(247, 250, 252);
+  }
+  #back-end{
+    display: grid;
+    grid-template-columns: repeat(3,120px);
+    grid-template-rows: repeat(2,100px);
+    gap: 20px;
+    margin: 10px;
+    
+  }
+  
+  #skill-img{
+    width: 40%;
+    padding: 19px;
+    box-shadow:-5px -2px 0px  #193858 ;
+  }
+  #skill-img>img{
+    width: 100%;
+    object-fit: contain;
+  }
+  .skill-card img{
+    width: 45%
+  }
+  @media(max-width:980px){
+    #about-skills{
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+    .both-end{
+      width: 100%;padding: 20px;
+    }
+    .both-end>#skill-title{
+      align-self: flex-start;
+    }
+    #skill-img{
+      width: 100%;
+      padding: 10px 40px;
+    }
+    #skill-img{
+      max-width: 100%;
+    }
+  }
+
+  .scroll-back{
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #193858;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: azure;
+    border-radius: 50%;
+  }
+
+  /**contact-section**/
+  #contact-me{
+    display: flex;
+    background-color: #709eb6;
+    align-items: center;
+    justify-content: space-between;
+    padding:  29px;
+  }
+  #contact-me .contact-left{
+    display: flex;
+    width: 50%;
+    padding: 40px;
+    gap: 10px;
+   
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  #contact-me .contact-left>div{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    height: 80px;
+    font-size: 20px;
+  }
+  #contact-me .contact-left>div a[class="icon-tel"]{
+    width: 55px;
+    height: 55px;
+    color: rgb(253, 252, 252);
+    padding-top: 10px;
+    background-color:#193858;
+    border-radius: 50%;
+  }
+  #contact-me .contact-left>div a[class="icon-tel"]:hover{
+    transform: translateY(-10px);
+  }
+  #contact-me .contact-left>div a[class="text-con"]{
+    text-decoration: none;
+    color: #193858;
+  }
+
+  #contact-me .contact-right{
+    width: 50%;
+    
+   
+  }
+  #contact-me .contact-right form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  #contact-me .contact-right input,#contact-me .contact-right textarea {
+    padding: 20px;
+    border: none;outline: none;
+    background-color: transparent;
+    border-bottom: #193858 1px solid;
+    font-size: 21px;
+  }
+  #btn{
+    width: 130px;
+    height: 50px;
+    border: none;text-align: center;
+    background-color: #193858;
+    color: aliceblue;
+    border-radius: 10px;
+  }
+  #btn:hover{
+    background-color: #5987b5;
+  }
+  #contact-me .contact-right input::placeholder,textarea::placeholder{
+    color: rgb(11, 11, 11);
+  }
+   
+  @media(max-width:980px){
+    #nab-bar{
+      flex-direction: column;
+      height: 100px;
+      
+    }
+    .my-name{
+      width: 100%;
+      text-align: center;
+      padding-top: 30px;
+    }
+    #nab-bar .right-link{
+      width: 100%;
+    }
+    #nab-bar .right-link ul{
+      font-size: 30px;
+       width: 100%;
+       align-items: center;
+       justify-content: center;
+       gap: 20px;
+    }
+    #nab-bar .right-link ul li{
+      width: fit-content;
+    }
+    .both-end>#skill-title,.both-end>p{
+     font-size: 38.7px;
+     font-family: 'Courier New', Courier, monospace;
+    }
+    #contact-me{
+      flex-direction: column;
+    }
+    #contact-me .contact-left,#contact-me .contact-right{
+    
+      width: 100%;
+      padding: 90px;
+    }
+  }
+
+  .footer{
+    background-color: #709eb6;
+    padding-top: 120px;
+  }
