@@ -291,7 +291,7 @@ body{
   @media(max-width:980px){
     #nab-bar{
       flex-direction: column;
-      height: 100px;
+      height: max-content;
       
     }
     .my-name{
