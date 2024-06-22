@@ -1,5 +1,6 @@
 
 Here's my Protfolio result https://nadi4567.github.io/Nadi-Portfolio/
+Firstly, I want you to know is this project has error a bit when you click home button ,  it won't get you to home page. it shows error.
 
 # Getting Started with Create React App
 
